@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dentist Booking</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="booking-container">
+        <div class="sidebar">
+            <div class="step-item active" data-step="1">
+                <i>✓</i>
+                <span>Staff</span>
+            </div>
+            <div class="step-item" data-step="2">
+                <i>✓</i>
+                <span>Service</span>
+            </div>
+            <div class="step-item" data-step="3">
+                <i>✓</i>
+                <span>Date & Time</span>
+            </div>
+            <div class="step-item" data-step="4">
+                <i>✓</i>
+                <span>Confirmation</span>
+            </div>
+        </div>
+        <div class="content">
+            <div class="step active" id="step1">
+                <div class="step-title">
+                    <h3>Select Staff</h3>
+                    <div class="close-btn">&times;</div>
+                </div>
+                <div class="staff-list">
+                    <div class="staff-card" data-id="staff1" data-name="Will Smith" data-email="willsmith@gmail.com">
+                        <div class="staff-img">
+                            <img src="smith.png" alt="Staff">
+                        </div>
+                        <div class="staff-info">
+                            <h4>Will Smith</h4>
+                            <p>willsmith@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="staff-card" data-id="staff2" data-name="Anthony Starks" data-email="anthonystarks@gmail.com">
+                        <div class="staff-img">
+                            <img src="starks.png" alt="Staff">
+                        </div>
+                        <div class="staff-info">
+                            <h4>Anthony Starks</h4>
+                            <p>anthonystarks@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="navigation">
+                    <button class="btn btn-next" id="staff-next">NEXT</button>
+                </div>
+            </div>
+
+            <div class="step" id="step2">
+                <div class="step-title">
+                    <h3>Select Service</h3>
+                    <div class="close-btn">&times;</div>
+                </div>
+                <div class="service-list">
+                    <div class="service-card" data-id="service1" data-name="Oral Hygiene" data-price="50.00">
+                        <div class="service-img">
+                            <img src="hygiene.png" alt="Service">
+                        </div>
+                        <div class="service-info">
+                            <h4>Oral Hygiene</h4>
+                            <p>1 hour</p>
+                        </div>
+                        <div class="service-price">50.00$</div>
+                    </div>
+                    <div class="service-card" data-id="service2" data-name="Implants" data-price="120.00">
+                        <div class="service-img">
+                            <img src="implant.png" alt="Service">
+                        </div>
+                        <div class="service-info">
+                            <h4>Implants</h4>
+                            <p>1 hour 30 minutes</p>
+                        </div>
+                        <div class="service-price">120.00$</div>
+                    </div>
+                    <div class="service-card" data-id="service3" data-name="Analysis" data-price="180.00">
+                        <div class="service-img">
+                            <img src="analysis.png" alt="Service">
+                        </div>
+                        <div class="service-info">
+                            <h4>Analysis</h4>
+                            <p>30 minutes</p>
+                        </div>
+                        <div class="service-price">180.00$</div>
+                    </div>
+                </div>
+                <div class="navigation">
+                    <button class="btn btn-back" id="service-back">BACK</button>
+                    <button class="btn btn-next" id="service-next">NEXT</button>
+                </div>
+            </div>
+
+            <div class="step" id="step3">
+                <div class="step-title">
+                    <h3>Select Date & Time</h3>
+                    <div class="close-btn">&times;</div>
+                </div>
+                <div class="calendar-container">
+                    <div class="calendar">
+                        <div class="calendar-header">
+                            <button id="prev-month">&lt;</button>
+                            <span id="current-month">May 2025</span>
+                            <button id="next-month">&gt;</button>
+                        </div>
+                        <div class="calendar-days">
+                            <div class="calendar-grid">
+                                <div class="calendar-day-header">Sun</div>
+                                <div class="calendar-day-header">Mon</div>
+                                <div class="calendar-day-header">Tue</div>
+                                <div class="calendar-day-header">Wed</div>
+                                <div class="calendar-day-header">Thu</div>
+                                <div class="calendar-day-header">Fri</div>
+                                <div class="calendar-day-header">Sat</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="time-slots">
+                        <h4>Time</h4>
+                        <div class="time-slots-container">
+                            <div class="time-slot" data-time="9:00-9:30">9:00-9:30</div>
+                            <div class="time-slot" data-time="9:30-10:00">9:30-10:00</div>
+                            <div class="time-slot" data-time="10:00-10:30">10:00-10:30</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navigation">
+                    <button class="btn btn-back" id="date-back">BACK</button>
+                    <button class="btn btn-next" id="date-next">NEXT</button>
+                </div>
+            </div>
+
+            <div class="step" id="step4">
+                <div class="step-title">
+                    <h3>Select Stuff</h3>
+                    <div class="close-btn">&times;</div>
+                </div>
+                <div class="confirmation-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="first-name">First name*</label>
+                            <input type="text" id="first-name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Last name*</label>
+                            <input type="text" id="last-name" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">E-mail*</label>
+                            <input type="email" id="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone">
+                        </div>
+                    </div>
+                    <div class="booking-summary">
+                        <h4>Note</h4>
+                        <div class="summary-item">
+                            <div class="summary-label">Staff:</div>
+                            <div class="summary-value" id="summary-staff">-</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">Service:</div>
+                            <div class="summary-value" id="summary-service">-</div>
+                        </div>
+                        <div class="summary-item">
+                            <div class="summary-label">Date:</div>
+                            <div class="summary-value" id="summary-date">-</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="navigation">
+                    <button class="btn btn-back" id="confirm-back">BACK</button>
+                    <button class="btn btn-confirm" id="confirm-booking">CONFIRMATION BOOKING</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
